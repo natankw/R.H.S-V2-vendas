@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - RHS Vendas</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-content">
+      <a href="index.html" class="logo">🛒 RHS Vendas</a>
+    </div>
+  </header>
+
+  <main class="container checkout">
+    <h1>Finalizar pedido</h1>
+    <div class="checkout-grid">
+      <div class="checkout-form">
+        <form id="checkoutForm">
+          <div class="form-group">
+            <label>Nome completo *</label>
+            <input type="text" id="nome" required />
+          </div>
+          <div class="form-group">
+            <label>WhatsApp *</label>
+            <input type="tel" id="whatsapp" required placeholder="(00) 00000-0000" />
+          </div>
+          <div class="form-group">
+            <label>E-mail (opcional)</label>
+            <input type="email" id="email" />
+          </div>
+          <button type="submit" class="btn-primary full">Criar pedido</button>
+        </form>
+      </div>
+      <div class="checkout-resumo">
+        <h3>Resumo da compra</h3>
+        <div id="resumoItens"></div>
+        <div class="total-resumo">
+          <span>Total:</span>
+          <span id="resumoTotal">R$ 0,00</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">...</footer>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="js/banco.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>
