@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+  <title>RHS Vendas</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">🛒 RHS Vendas</div>
+        <div class="header-actions">
+          <button id="cartBtn" class="cart-icon">
+            🛒 <span id="cartCount">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BANNER -->
+  <section class="banner">
+    <div class="container">
+      <div class="banner-text">
+        <h1>Produtos digitais<br />de qualidade</h1>
+        <p>Os melhores templates, cursos e ferramentas para você</p>
+        <a href="#produtos" class="btn-primary">Ver produtos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIAS + BUSCA -->
+  <section class="filtros">
+    <div class="container">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Buscar produto..." />
+      </div>
+      <div class="categorias" id="categoriasContainer">
+        <button class="cat-btn active" data-cat="todos">Todos</button>
+        <!-- outras categorias via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS EM DESTAQUE -->
+  <section class="produtos" id="produtos">
+    <div class="container">
+      <h2 class="section-title">🔥 Destaques</h2>
+      <div class="grid-produtos" id="produtosGrid">
+        <!-- carregado via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 RHS Vendas - Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <!-- CARRINHO SIDEBAR -->
+  <div id="cartSidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h2>Seu carrinho</h2>
+      <button class="close-btn" id="closeCart">×</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <!-- itens -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cartTotal">R$ 0,00</span>
+      </div>
+      <a href="checkout.html" class="btn-primary full">Finalizar compra</a>
+    </div>
+  </div>
+  <div id="cartOverlay" class="overlay"></div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="js/banco.js"></script>
+  <script src="js/loja.js"></script>
+</body>
+</html>
