@@ -1,90 +1,183 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
-  <title>RHS Vendas</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R.H.S VENDAS — Marketplace de Produtos Digitais</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container">
-      <div class="header-content">
-        <div class="logo">🛒 RHS Vendas</div>
-        <div class="header-actions">
-          <button id="cartBtn" class="cart-icon">
-            🛒 <span id="cartCount">0</span>
-          </button>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">R.H.S VENDAS</a>
+                <div class="header-actions">
+                    <button id="cartBtn" class="cart-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                            <line x1="3" y1="6" x2="21" y2="6" />
+                            <path d="M16 10a4 4 0 0 1-8 0" />
+                        </svg>
+                        <span id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- BANNER -->
-  <section class="banner">
-    <div class="container">
-      <div class="banner-text">
-        <h1>Produtos digitais<br />de qualidade</h1>
-        <p>Os melhores templates, cursos e ferramentas para você</p>
-        <a href="#produtos" class="btn-primary">Ver produtos</a>
-      </div>
-    </div>
-  </section>
+    <!-- BANNER PRINCIPAL -->
+    <section class="banner-principal">
+        <div class="container">
+            <div class="banner-content">
+                <span class="banner-tag">Ofertas Relâmpago</span>
+                <h1>O jeito mais rápido de comprar<br />produtos digitais no Brasil.</h1>
+                <p>Discord Nitro, contas, gift cards, licenças e bots. Entrega automática em segundos.</p>
+                <div class="banner-features">
+                    <span>🚀 Entrega instantânea</span>
+                    <span>🔒 Retenção 5 dias</span>
+                    <span>💰 Taxa apenas 1,5%</span>
+                </div>
+                <a href="#produtos" class="btn-primary">Ver todas →</a>
+            </div>
+        </div>
+    </section>
 
-  <!-- CATEGORIAS + BUSCA -->
-  <section class="filtros">
-    <div class="container">
-      <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Buscar produto..." />
-      </div>
-      <div class="categorias" id="categoriasContainer">
-        <button class="cat-btn active" data-cat="todos">Todos</button>
-        <!-- outras categorias via JS -->
-      </div>
-    </div>
-  </section>
+    <!-- CATEGORIAS -->
+    <section class="categorias">
+        <div class="container">
+            <h2 class="section-title">Categorias</h2>
+            <p class="section-subtitle">Encontre exatamente o que você precisa</p>
+            <div class="categorias-grid" id="categoriasContainer">
+                <!-- Gerado via JS -->
+            </div>
+        </div>
+    </section>
 
-  <!-- PRODUTOS EM DESTAQUE -->
-  <section class="produtos" id="produtos">
-    <div class="container">
-      <h2 class="section-title">🔥 Destaques</h2>
-      <div class="grid-produtos" id="produtosGrid">
-        <!-- carregado via JS -->
-      </div>
-    </div>
-  </section>
+    <!-- EM DESTAQUE -->
+    <section class="produtos-destaque">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">✨ Em Destaque</h2>
+                <span class="section-badge">Curadoria da semana</span>
+            </div>
+            <div class="grid-produtos" id="produtosGrid">
+                <!-- Gerado via JS -->
+            </div>
+        </div>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 RHS Vendas - Todos os direitos reservados</p>
-    </div>
-  </footer>
+    <!-- CUPOM -->
+    <section class="cupom">
+        <div class="container">
+            <div class="cupom-card">
+                <span class="cupom-tag">Cupom ativo</span>
+                <h3>BEMVINDO10</h3>
+                <p>10% off na sua primeira compra — válido em tudo.</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- CARRINHO SIDEBAR -->
-  <div id="cartSidebar" class="cart-sidebar">
-    <div class="cart-header">
-      <h2>Seu carrinho</h2>
-      <button class="close-btn" id="closeCart">×</button>
-    </div>
-    <div class="cart-items" id="cartItems">
-      <!-- itens -->
-    </div>
-    <div class="cart-footer">
-      <div class="cart-total">
-        <span>Total:</span>
-        <span id="cartTotal">R$ 0,00</span>
-      </div>
-      <a href="checkout.html" class="btn-primary full">Finalizar compra</a>
-    </div>
-  </div>
-  <div id="cartOverlay" class="overlay"></div>
+    <!-- MAIS VENDIDOS -->
+    <section class="produtos-mais-vendidos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">📈 Mais Vendidos</h2>
+                <a href="#" class="link-ver-todos">Ver todos →</a>
+            </div>
+            <div class="grid-produtos" id="maisVendidosGrid">
+                <!-- Gerado via JS -->
+            </div>
+        </div>
+    </section>
 
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
-  <script src="js/banco.js"></script>
-  <script src="js/loja.js"></script>
+    <!-- DEPOIMENTOS -->
+    <section class="depoimentos">
+        <div class="container">
+            <h2 class="section-title">O que dizem nossos compradores</h2>
+            <p class="section-subtitle">Mais de 10.000 transações seguras este mês</p>
+            <div class="depoimentos-grid">
+                <div class="depoimento-card">
+                    <p>"Entrega instantânea. Comprei o Nitro e em menos de 2 minutos já estava ativado. Recomendo demais!"</p>
+                    <div class="depoimento-autor">
+                        <strong>Gabriel S.</strong>
+                        <span>Comprador verificado</span>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <p>"Suporte excelente. Tive uma dúvida sobre a licença e me responderam em segundos no chat. Nota 10!"</p>
+                    <div class="depoimento-autor">
+                        <strong>Mariana L.</strong>
+                        <span>Comprador verificado</span>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <p>"Melhor preço do mercado. Já comprei vários gift cards e nunca tive problema. Confiável e barato."</p>
+                    <div class="depoimento-autor">
+                        <strong>Ricardo M.</strong>
+                        <span>Comprador verificado</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">R.H.S VENDAS</div>
+                <div class="footer-links">
+                    <a href="#">Sobre</a>
+                    <a href="#">Termos</a>
+                    <a href="#">Privacidade</a>
+                    <a href="#">Suporte</a>
+                </div>
+                <div class="footer-whatsapp">
+                    <a href="https://wa.me/+555195886282?text=Oi+atendimento+R.H.S+vim+comprar+robux+" target="_blank">
+                        💬 Atendimento via WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2026 R.H.S VENDAS - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CARRINHO SIDEBAR -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Seu carrinho</h2>
+            <button class="close-btn" id="closeCart">×</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">R$ 0,00</span>
+            </div>
+            <button id="finalizarWhatsAppBtn" class="btn-whatsapp full">
+                💬 Finalizar pelo WhatsApp
+            </button>
+            <a href="checkout.html" class="btn-primary full" style="margin-top:8px;">
+                Finalizar compra
+            </a>
+        </div>
+    </div>
+    <div id="cartOverlay" class="overlay"></div>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/+555195886282?text=Oi+atendimento+R.H.S+vim+comprar+robux+" 
+       target="_blank" 
+       class="whatsapp-float">
+        💬
+    </a>
+
+    <script src="js/banco.js"></script>
+    <script src="js/loja.js"></script>
 </body>
-</html>
+  </html>
