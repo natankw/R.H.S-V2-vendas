@@ -22,7 +22,7 @@ function inicializarDados() {
                 entrega: 'Automática',
                 vendedor: 'RHS_Oficial',
                 badge: '💜 Mais Vendido',
-                metodoPagamento: 'whatsapp' // ou 'mercadopago'
+                metodoPagamento: 'whatsapp'
             },
             {
                 id: '2',
@@ -138,9 +138,12 @@ function updatePedido(id, dados) {
     });
 }
 
-// --- Autenticação ---
-const ADMIN_USER = 'admin';
-const ADMIN_PASS = 'admin123';
+// ==========================================
+// 🔐 AUTENTICAÇÃO - NOVAS CREDENCIAIS
+// ==========================================
+
+const ADMIN_USER = 'rhs@gmail.com';     // ← NOVO USUÁRIO
+const ADMIN_PASS = 'rhsbotarkkpramama'; // ← NOVA SENHA
 
 function loginAdmin(email, senha) {
     return new Promise((resolve, reject) => {
